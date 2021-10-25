@@ -27,7 +27,7 @@ if(defined $ARGV[0]){
 my $outfile = "";
 if($reffile=~/.+\/(.+)\..+?$/){
 	$outfile = "$1.HSat2and3_Regions.bed";
-}elsif($reffile=~/$(.+)\..+?$/){
+}elsif($reffile=~/^(.+)\..+?$/){
 	$outfile = "$1.HSat2and3_Regions.bed";
 }else{
 	$outfile = "$reffile.HSat2and3_Regions.bed";
