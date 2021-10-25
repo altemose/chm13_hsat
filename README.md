@@ -1,6 +1,5 @@
-# chm13_hsat
-## Assembly_HSat2and3_v2.pl
-## Nicolas Altemose 2021
+# Assembly_HSat2and3_v2.pl
+by Nicolas Altemose 2021
   - purpose: to annotate HSat2 and HSat3 arrays in a set of input DNA sequences
   - inputs: a fasta file containing DNA sequences, and two provided text files containing HSat2 and HSat3 specific 24-mers
   - output: a BED9 file listing all contiguous regions in the reference likely to be HSat2 or HSat3, along with their strand orientation
