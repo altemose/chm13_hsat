@@ -80,7 +80,7 @@ open(FASTA,$reffile) or die "ERROR: Could not open reference file $reffile\n";
 my $junk = <FASTA>; #remove first > from beginning of file
 while(my $frecord = <FASTA>){
 	chomp($frecord);
-	$frecord=~/^(.+?)\n(.*)$/s or die "ERROR: problem in $reffile parsing this:\n$frecord\n";
+	$frecord=~/^(\S+).*?\n(.*)$/s or die "ERROR: problem in $reffile parsing this:\n$frecord\n";
 			#note: $1 can be modified to change which parts of header are kept
 	my $chr = $1;
 	my $chrseq = $2;
@@ -188,7 +188,7 @@ open(FASTA,$reffile) or die "ERROR: Could not open $reffile\n";
 my $junk = <FASTA>; #remove first > from beginning of file
 while(my $frecord = <FASTA>){
 	chomp($frecord);
-	$frecord=~/^(.+?)\n(.*)$/s or die "ERROR: problem in $reffile parsing this:\n$frecord\n";
+	$frecord=~/^(\S+).*?\n(.*)$/s or die "ERROR: problem in $reffile parsing this:\n$frecord\n";
 			#note: $1 can be modified to change which parts of header are kept
 	my $chr = $1;
 	my $chrseq=$2;
